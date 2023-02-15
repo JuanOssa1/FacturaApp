@@ -1,0 +1,31 @@
+{
+  "name": "facturaapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server --port 3001",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transpile": "node-sass ./Sass/main.scss -o dist -w",
+    "transpile-ts": "tsc -w",
+    "jsoninfo": "json-server ./Db/info.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanOssa1/FacturaApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanOssa1/FacturaApp/issues"
+  },
+  "homepage": "https://github.com/JuanOssa1/FacturaApp#readme",
+  "devDependencies": {
+    "json-server": "^0.17.1",
+    "lite-server": "^2.6.1",
+    "node-sass": "^8.0.0",
+    "sass": "^1.58.0",
+    "typescript": "^4.9.5"
+  }
+}
