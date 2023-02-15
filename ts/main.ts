@@ -1,4 +1,4 @@
-let codeBarList = ["| ||| |","||  |||","   |||||| ","|| |||"];
+let codeBarList = ["| ||| |","||  |||","   |||||| ","|| |||", "    |||||", "| |", "| |"];
 console.log("Test TS")
 const BASE = 10
 
