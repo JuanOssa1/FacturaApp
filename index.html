@@ -13,27 +13,33 @@
     <section class="main-content">
         <section class="main-form">
             <h1>Welcome!</h1>
-            <input type="text" class="main-form__input" placeholder="Enter product quantity">
-            <input type="text" class="main-form__input" placeholder="Enter bar code">
-            <button class="main-form__button"> Scan </button>
+            <input type="number" class="main-form__input" placeholder="Enter product quantity" id="inputQuantityId">
+            <input type="text" class="main-form__input" placeholder="Enter bar code" id="inputCodeBarId">
+            <button class="main-form__button" id="scan-button-id"> Scan </button>
         </section>
         <section class="main-info">
             <table class="main-info__table">
                 <caption class="table__caption">Inventory Table</caption>
-                <thead class="table__head">
+                <thead class="table__head" id="table__head-id">
                     <tr class="table__tr">
                         <th class="table__th">Id</th>
                         <th class="table__th">Name</th>
                         <th class="table__th">Price</th>
+                        <th class="table__th">Quantity</th>
+                        <th class="table__th">Total</th>
                     </tr>
                 </thead>
                 <tbody class="table__body">
-                    <tr class="table__tr">
-                        <th class="table__th">3455</th>
-                        <th class="table__th">Default Test Value</th>
-                        <th class="table__th">$Bastante</th>
-                    </tr>
                 </tbody>
+                <tfoot class="table__head" id="table__head-id">
+                    <tr class="table__tr">
+                        <th class="table__th">Total</th>
+                        <th class="table__th"></th>
+                        <th class="table__th"></th>
+                        <th class="table__th"></th>
+                        <th class="table__th">Quantity</th>
+                    </tr>
+                </tfoot>
             </table>
         </section>
     </section>

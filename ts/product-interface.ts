@@ -1,6 +1,6 @@
 interface productInterface{
     title: string;
-    price: string;
+    price: number;
     description: string;
     category: string;
     image: string;

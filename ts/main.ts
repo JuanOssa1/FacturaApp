@@ -1,10 +1,52 @@
 const url = "http://localhost:3000/products"
-
+const formInputQuantity = document.getElementById("inputQuantityId")! as HTMLInputElement
+const formInputBarCode = document.getElementById("inputCodeBarId")! as HTMLInputElement
+const theadTag =  document.getElementById("table__head-id")! as HTMLElement
+const formButton = document.getElementById("scan-button-id")! as HTMLButtonElement
 
 let codeBarList = ["| ||| |","||  |||","   |||||| ","|| |||", "    |||||", "| |", "| |"];
 console.log("Test TS")
 const BASE = 10
 
+//let totalProducstPrice: number;
+let products: productInterface[];
+
+
+
+
+function fetchData () {
+    fetch(url).then((response)=>{
+        return response.json();
+    }).then((data: productInterface[])=>{
+        products = data
+        //loadData(products)
+    }).catch((error)=>{
+        error
+    }) 
+}
+fetchData()
+
+function addRow() {
+    
+}
+
+function filterProducts(productsToFilter: productInterface[], decisionAttribute: string) {
+    const resul = productsToFilter.filter((product: productInterface)=>{
+        return product.id == decisionAttribute
+    })
+    return resul[0];  
+}
+function createTableRow(...tagContent: string[]) {
+    let tableRow = document.createElement("tr")
+    tableRow.classList.add("table__tr")
+    for (const content of tagContent) {
+        let newTag = document.createElement("th")
+        newTag.classList.add("table__th")
+        newTag.innerHTML = content;
+        tableRow.appendChild(newTag)
+    }
+    return tableRow;
+}
 
 function getIdSum(numbers:string) {
     let id=0;
@@ -51,3 +93,11 @@ getBarIdsArray(codeBarList)
 function getSubTotal(price:number, quantity:number) {
     return price*quantity;
 }
+
+formButton.addEventListener("click",()=>{
+    const productToShow = filterProducts(products,processBarCode(formInputBarCode.value).toString())
+    let productPrice = productToShow.price
+    let productQuanity = parseInt(formInputQuantity.value)
+    let subTotal = getSubTotal(productPrice,productQuanity)
+    theadTag.appendChild(createTableRow(productToShow.id, productToShow.title, productPrice.toString(),productQuanity.toString(),subTotal.toString()))
+})

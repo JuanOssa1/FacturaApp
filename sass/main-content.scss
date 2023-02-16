@@ -27,16 +27,17 @@
         &__table {
             //Como usar el & con estos de abajo
             border-collapse: collapse;
+            border: 1px solid black;
 
             .table__caption{
                 font-weight: bold;
                 margin-bottom: 15px;
             }
             .table__th, .table__td {
-                border: 1px solid black;
+                //border: 1px solid black;
             }
             .table__head .table__th{
-                width: 25%;
+                width: 10%;
             }
         }
     }
