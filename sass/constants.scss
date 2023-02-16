@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:wght@300&display=swap');
+
+$base-font-family: 'Lato', sans-serif;
+
+.basic-display-flex{
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

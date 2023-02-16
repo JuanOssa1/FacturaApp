@@ -1,0 +1,46 @@
+@import "./constants.scss";
+
+.main-content{
+    display: grid;
+    font-family: 'Lato', sans-serif;
+    grid-template: 1fr 0fr/ 1fr 1fr;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .main-form {
+        @extend .basic-display-flex;
+        &__input {
+            font-family: $base-font-family;
+            width: 200px;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+        &__button{
+            font-family: $base-font-family;
+            width: 80px;
+            height: 30px;
+        }
+    }
+    .main-info{
+        @extend .basic-display-flex;
+        &__table {
+            //Como usar el & con estos de abajo
+            border-collapse: collapse;
+
+            .table__caption{
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            .table__th, .table__td {
+                border: 1px solid black;
+            }
+            .table__head .table__th{
+                width: 25%;
+            }
+        }
+    }
+
+       
+}
+

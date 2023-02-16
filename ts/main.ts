@@ -1,6 +1,10 @@
+const url = "http://localhost:3000/products"
+
+
 let codeBarList = ["| ||| |","||  |||","   |||||| ","|| |||", "    |||||", "| |", "| |"];
 console.log("Test TS")
 const BASE = 10
+
 
 function getIdSum(numbers:string) {
     let id=0;
@@ -43,3 +47,7 @@ function getBarIdsArray(codeBarList:string[]=[]) {
     }
 }
 getBarIdsArray(codeBarList)
+
+function getSubTotal(price:number, quantity:number) {
+    return price*quantity;
+}

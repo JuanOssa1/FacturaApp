@@ -4,10 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./dist/js/main.js"></script>
-    <title>Document</title>
+    <script src="./dist/js/main.js" defer></script>
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <title>Facturapp</title>
 </head>
 <body>
+    <img class="background-image" src="https://wallpapercrafter.com/desktop/152770-video-games-BioShock-Infinite-Columbia-Bioshock-futuristic.jpg" alt="Falle" >
+    <section class="main-content">
+        <section class="main-form">
+            <h1>Welcome!</h1>
+            <input type="text" class="main-form__input" placeholder="Enter product quantity">
+            <input type="text" class="main-form__input" placeholder="Enter bar code">
+            <button class="main-form__button"> Scan </button>
+        </section>
+        <section class="main-info">
+            <table class="main-info__table">
+                <caption class="table__caption">Inventory Table</caption>
+                <thead class="table__head">
+                    <tr class="table__tr">
+                        <th class="table__th">Id</th>
+                        <th class="table__th">Name</th>
+                        <th class="table__th">Price</th>
+                    </tr>
+                </thead>
+                <tbody class="table__body">
+                    <tr class="table__tr">
+                        <th class="table__th">3455</th>
+                        <th class="table__th">Default Test Value</th>
+                        <th class="table__th">$Bastante</th>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
     
 </body>
 </html>

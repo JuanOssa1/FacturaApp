@@ -6,9 +6,9 @@
   "scripts": {
     "start": "lite-server --port 3001",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "transpile": "node-sass ./Sass/main.scss -o dist -w",
+    "transpile": "node-sass ./sass/main.scss -o dist/css -w",
     "transpile-ts": "tsc -w",
-    "jsoninfo": "json-server ./Db/info.json"
+    "jsoninfo": "json-server ./db/info.json"
   },
   "repository": {
     "type": "git",
