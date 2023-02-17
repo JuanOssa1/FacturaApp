@@ -55,21 +55,20 @@
 
     .main-info {
         @extend .basic-display-flex;
-
         &__table {
             //Como usar el & con estos de abajo
             margin: 20px;
             border-collapse: collapse;
             border: $base-border;
-
-            .table__caption {
-                font-weight: bold;
-                margin-bottom: 15px;
-            }
-            .table__head .table__th {
-                width: 10%;
-            }
         }
+    }
+
+    .table__caption {
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .table__head .table__th {
+        width: 10%;
     }
 
 
