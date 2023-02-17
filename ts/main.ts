@@ -3,12 +3,13 @@ const formInputQuantity = document.getElementById("inputQuantityId")! as HTMLInp
 const formInputBarCode = document.getElementById("inputCodeBarId")! as HTMLInputElement
 const theadTag =  document.getElementById("table__head-id")! as HTMLElement
 const formButton = document.getElementById("scan-button-id")! as HTMLButtonElement
+const grandTotalTag = document.getElementById("grand-total-id")! as HTMLElement;
 
 let codeBarList = ["| ||| |","||  |||","   |||||| ","|| |||", "    |||||", "| |", "| |"];
 console.log("Test TS")
 const BASE = 10
 
-//let totalProducstPrice: number;
+let grandTotal: number=0;
 let products: productInterface[];
 
 
@@ -19,7 +20,6 @@ function fetchData () {
         return response.json();
     }).then((data: productInterface[])=>{
         products = data
-        //loadData(products)
     }).catch((error)=>{
         error
     }) 
@@ -93,11 +93,19 @@ getBarIdsArray(codeBarList)
 function getSubTotal(price:number, quantity:number) {
     return price*quantity;
 }
+function getGrandTotal(subTotal:number) {
+    grandTotal+=subTotal
+    
+    return grandTotal;
+}
 
 formButton.addEventListener("click",()=>{
     const productToShow = filterProducts(products,processBarCode(formInputBarCode.value).toString())
     let productPrice = productToShow.price
     let productQuanity = parseInt(formInputQuantity.value)
     let subTotal = getSubTotal(productPrice,productQuanity)
+    grandTotalTag.innerHTML = getGrandTotal(subTotal).toFixed(2).toString()
     theadTag.appendChild(createTableRow(productToShow.id, productToShow.title, productPrice.toString(),productQuanity.toString(),subTotal.toString()))
+    
 })
+

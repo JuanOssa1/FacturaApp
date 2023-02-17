@@ -1,6 +1,6 @@
 @import "./constants.scss";
 
-.main-content{
+.main-content {
     display: grid;
     font-family: 'Lato', sans-serif;
     grid-template: 1fr 0fr/ 1fr 1fr;
@@ -10,38 +10,67 @@
 
     .main-form {
         @extend .basic-display-flex;
+        height: 100vh;
+
         &__input {
             font-family: $base-font-family;
+            background: $base-background-color;
             width: 200px;
             height: 30px;
             margin-bottom: 20px;
+            border: $base-border;
+
+            &::placeholder {
+                color: black;
+            }
+
+            &:hover {
+                background: $hover-background-color;
+            }
+
+            &:focus {
+                outline: none;
+            }
+            &[type=number] {
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+            }
+
         }
-        &__button{
+
+        &__button {
             font-family: $base-font-family;
+            background: $base-background-color;
+            border: $base-border;
             width: 80px;
             height: 30px;
+
+            &:hover {
+                background: $hover-background-color;
+                cursor: pointer
+            }
         }
     }
-    .main-info{
+
+    .main-info {
         @extend .basic-display-flex;
+
         &__table {
             //Como usar el & con estos de abajo
+            margin: 20px;
             border-collapse: collapse;
-            border: 1px solid black;
+            border: $base-border;
 
-            .table__caption{
+            .table__caption {
                 font-weight: bold;
                 margin-bottom: 15px;
             }
-            .table__th, .table__td {
-                //border: 1px solid black;
-            }
-            .table__head .table__th{
+            .table__head .table__th {
                 width: 10%;
             }
         }
     }
 
-       
-}
 
+}

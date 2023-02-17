@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:wght@300&display=swap');
 
 $base-font-family: 'Lato', sans-serif;
+$base-background-color: rgba(128, 128, 128,0.1);
+$hover-background-color: rgba(128, 128, 128,0.2);
+$base-border: 1px solid  rgba(0, 0, 0,0.6);
 
 .basic-display-flex{
     border: 0;
