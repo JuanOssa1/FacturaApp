@@ -1,10 +1,13 @@
 const path = require('path');
 
 module.exports = {
+    mode: "development",
   entry: './src/ts/main.ts',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    //crea el bundle en la carpeta
+    publicPath: "dist"
   },
    //indicamos que los maps ya estan generados y que no los tiene que generar que simplemente los tome y los agregue al bundle
   devtool: 'inline-source-map',

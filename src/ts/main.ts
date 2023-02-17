@@ -14,7 +14,6 @@ let products: productInterface[];
 
 
 
-
 function fetchData () {
     fetch(url).then((response)=>{
         return response.json();

@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server --port 3001",
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "transpile": "node-sass ./src/sass/main.scss -o dist/css -w",
     "transpile-ts": "tsc -w",
     "jsoninfo": "json-server ./db/info.json",
-    "build": "webpack"
+    "build": "webpack",
+    "buildProduction": "webpack --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/JuanOssa1/FacturaApp#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "json-server": "^0.17.1",
     "lite-server": "^2.6.1",
     "node-sass": "^8.0.0",
