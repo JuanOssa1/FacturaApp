@@ -1,48 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./dist/js/main.js" defer></script>
-    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="stylesheet" href="./dist/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Facturapp</title>
-</head>
-<body>
-    <img class="background-image" src="https://wallpapercrafter.com/desktop/152770-video-games-BioShock-Infinite-Columbia-Bioshock-futuristic.jpg" alt="Falle" >
+  </head>
+  <body>
+    <img
+      class="background-image"
+      src="https://wallpapercrafter.com/desktop/152770-video-games-BioShock-Infinite-Columbia-Bioshock-futuristic.jpg"
+      alt="Falle"
+    />
     <section class="main-content">
-        <section class="main-form">
-            <h1>Welcome!</h1>
-            <input type="number" class="main-form__input" placeholder="Enter product quantity" id="inputQuantityId">
-            <input type="text" class="main-form__input" placeholder="Enter bar code" id="inputCodeBarId">
-            <button class="main-form__button" id="scan-button-id"> Scan </button>
-        </section>
-        <section class="main-info">
-            <table class="main-info__table">
-                <caption class="table__caption">Inventory Table</caption>
-                <thead class="table__head" id="table__head-id">
-                    <tr class="table__tr">
-                        <th class="table__th">Id</th>
-                        <th class="table__th">Name</th>
-                        <th class="table__th">Price</th>
-                        <th class="table__th">Quantity</th>
-                        <th class="table__th">Total</th>
-                    </tr>
-                </thead>
-                <tbody class="table__body">
-                </tbody>
-                <tfoot class="table__head" id="table__head-id">
-                    <tr class="table__tr">
-                        <th class="table__th">Total</th>
-                        <th class="table__th"></th>
-                        <th class="table__th"></th>
-                        <th class="table__th"></th>
-                        <th class="table__th" id="grand-total-id">---</th>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
+      <section class="main-form">
+        <h1 class="main-form__title">Welcome!</h1>
+        <input
+          type="number"
+          class="main-form__input"
+          placeholder="Enter product quantity"
+          id="inputQuantityId"
+        />
+        <input
+          type="text"
+          class="main-form__input"
+          placeholder="Enter bar code"
+          id="inputCodeBarId"
+        />
+        <button class="main-form__button" id="scan-button-id">Scan</button>
+        <section class="table-container"></section>
+        <table class="table table__id">
+          <thead class="table__head">
+            <tr class="table__tr">
+              <th class="table__th">Id's avaiable</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table__tr">
+              <th class="table__th">|&nbsp|||&nbsp|</th>
+            </tr>
+            <tr class="table__tr">
+                <th class="table__th">||&nbsp&nbsp|||</th>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__th">&nbsp&nbsp&nbsp||||||&nbsp</th>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__th">||&nbsp|||</th>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__th">&nbsp&nbsp&nbsp&nbsp|||||</th>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__th">|&nbsp|</th>
+              </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="main-info">
+        <h1 class="main-info__title">Inventory Table</h1>
+        <table class="table">
+          <thead class="table__head" id="table__head-id">
+            <tr class="table__tr">
+              <th class="table__th">Id</th>
+              <th class="table__th">Name</th>
+              <th class="table__th">Price</th>
+              <th class="table__th">Quantity</th>
+              <th class="table__th">Total</th>
+            </tr>
+          </thead>
+          <tbody class="table__body"></tbody>
+          <tfoot class="table__head" id="table__head-id">
+            <tr class="table__tr">
+              <th class="table__th">Total</th>
+              <th class="table__th"></th>
+              <th class="table__th"></th>
+              <th class="table__th"></th>
+              <th class="table__th" id="grand-total-id">---</th>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
     </section>
-    
-</body>
+  </body>
 </html>

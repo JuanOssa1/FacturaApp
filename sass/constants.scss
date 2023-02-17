@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu:wght@300&display=swap');
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 $base-font-family: 'Lato', sans-serif;
 $base-background-color: rgba(128, 128, 128,0.1);
@@ -7,8 +8,15 @@ $base-border: 1px solid  rgba(0, 0, 0,0.6);
 
 .basic-display-flex{
     border: 0;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.main-titles{
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 15px;
+    font-size: 30px;
+    color: black;
 }
