@@ -14,7 +14,6 @@ let products: productInterface[];
 
 
 
-
 function fetchData () {
     fetch(url).then((response)=>{
         return response.json();
@@ -34,7 +33,12 @@ function filterProducts(productsToFilter: productInterface[], decisionAttribute:
     const resul = productsToFilter.filter((product: productInterface)=>{
         return product.id == decisionAttribute
     })
-    return resul[0];  
+    if(resul.length==0){
+        alert("Codigo de barras no encontrado")
+        throw new Error("Codigo de barras no encontrado")
+    } else{
+        return resul[0];  
+    }
 }
 function createTableRow(...tagContent: string[]) {
     let tableRow = document.createElement("tr")

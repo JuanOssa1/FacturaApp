@@ -1,16 +1,21 @@
 @import "./constants.scss";
+//@import "../node_modules/bootstrap/scss/bootstrap";
 
 .main-content {
+    
     display: grid;
     font-family: 'Lato', sans-serif;
     grid-template: 1fr 0fr/ 1fr 1fr;
     position: absolute;
     height: 100%;
     width: 100%;
-
     .main-form {
+        
         @extend .basic-display-flex;
         height: 100vh;
+        &__title{
+            @extend .main-titles
+        }
 
         &__input {
             font-family: $base-font-family;
@@ -30,6 +35,7 @@
 
             &:focus {
                 outline: none;
+                
             }
             &[type=number] {
                 &::-webkit-inner-spin-button {
@@ -51,25 +57,29 @@
                 cursor: pointer
             }
         }
+        
     }
 
     .main-info {
         @extend .basic-display-flex;
-
-        &__table {
-            //Como usar el & con estos de abajo
-            margin: 20px;
-            border-collapse: collapse;
-            border: $base-border;
-
-            .table__caption {
-                font-weight: bold;
-                margin-bottom: 15px;
-            }
-            .table__head .table__th {
-                width: 10%;
-            }
+        &__title {
+            @extend .main-titles
         }
+    }
+    .table{
+        &__th{
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+
+    .table__head .table__th {
+        width: 10%;
+        //aqui como haria para usar el & sin que se rompa el bem
+    }
+    .table__id{
+        margin: 40px;
+        width: 90px;
     }
 
 
